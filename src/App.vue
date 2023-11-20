@@ -1,8 +1,12 @@
 <template >
-  <div class="container">
+  <div>
+   
     <Header />
-    <Navbar />
-    <Hero />
+    <div class="container">
+      <Navbar />
+    </div>
+      <Hero />
+
   </div>
 </template>
 
@@ -10,12 +14,16 @@
 import Header from './components/Header.vue';
 import Hero from './components/Hero.vue';
 import Navbar from './components/Navbar.vue';
+import AOS from "aos"
 export default {
   components:{
     Header,
     Navbar,
     Hero
-}
+},
+mounted() {
+  AOS.init()
+},
 }
 </script>
 
@@ -27,4 +35,5 @@ export default {
     padding: 0 16px;
     box-sizing: border-box;
   }
+ 
 </style>
